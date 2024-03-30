@@ -1,0 +1,112 @@
+.product-element{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content:flex-start;
+  width: 360px;
+  margin: 8px;
+  background-color: var(--color-white);
+  border-radius: 10px;
+  padding: 10px;
+  
+}
+.product-element:hover{
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transition: all 0.8s;
+}
+
+.product-element__img {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.img-product{    
+  height: 240px;
+}
+
+.title-and-price{
+  padding: 10px;
+  width:90%;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.title-and-price__title{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 21px;
+  color: var(--color-text-black);
+}
+
+.title-and-price__price{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+
+  color: var(--color-orange-dark);
+}
+
+.rate-and-buy{
+  padding: 10px;
+  width:100%;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.rate-and-buy__rate{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+}
+
+.rate-and-buy__rate-value{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+  color: var(--color-grey-dark);
+  align-self: center;
+  padding:3px;
+}
+
+.buy{
+  width:50%;
+}
+
+.button-buy{
+  width:100%;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+
+  color: var(--color-text-black);
+  background-color: var(--color-white);
+  border-radius: 10px;
+
+  padding:3px;  
+}
+
+.button-buy:hover{
+  color:var(--color-orange-dark);
+}
+.button-buy:active{
+  color:var(--color-green);
+  background-color: var(--color-backgrount);
+}
+

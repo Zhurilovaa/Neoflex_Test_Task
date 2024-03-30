@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
-
 /* Обнуление стилей */
 *{
     padding:0;
@@ -53,16 +51,16 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 /* Основые цвета */
 :root{
-  --color-backgrount: #EAEAEA;
-  --color-white: #FFFFFF;
-  --color-text-black: #101010;
-  --color-grey-dark: #838383;
-  --color-grey-light: #AAAAAA;
-  --color-shadow: rgba(0, 0, 0, 0.25);
-  --color-orange: #FFCE7F;
-  --color-orange-dark: #FFA542;
-  --color-red: #DF6464;
-  --color-green:#4AFD80;
+    --color-backgrount: #EAEAEA;
+    --color-white: #FFFFFF;
+    --color-text-black: #101010;
+    --color-grey-dark: #838383;
+    --color-grey-light: #AAAAAA;
+    --color-shadow: rgba(0, 0, 0, 0.25);
+    --color-orange: #FFCE7F;
+    --color-orange-dark: #FFA542;
+    --color-red: #DF6464;
+    --color-green:#4AFD80;
 }
 body{
     background: var(--color-backgrount);  
