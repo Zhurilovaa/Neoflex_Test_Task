@@ -5,4 +5,7 @@ export interface HeadphoneData {
   title: string;
   price: number;
   rate: number;
+  bluetooth: boolean;
+  countInBasket: number;
+  isFavorite: boolean;
 }
