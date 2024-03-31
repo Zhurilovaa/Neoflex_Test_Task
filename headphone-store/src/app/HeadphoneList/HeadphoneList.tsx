@@ -5,6 +5,7 @@ import { Headphone } from '../HeadPhone/Headphone';
 import { ReduxStoreToolkit } from '../../types/ReduxStore.types';
 import { HeadphoneData } from '../../types/Headphone.types';
 import { MainMenu } from '../MainMenu/MainMenu';
+import { Footer } from '../Footer/Footer';
 
 export function HeadphoneList() {
   const locatPage = useLocation();
@@ -38,6 +39,9 @@ export function HeadphoneList() {
             ))}
           </div>
         </div>
+      </div>
+      <div className="footer">
+        <Footer />
       </div>
     </div>
   );

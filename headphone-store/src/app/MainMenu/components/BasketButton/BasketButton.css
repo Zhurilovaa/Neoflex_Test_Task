@@ -4,7 +4,7 @@
   height: 25px; 
 }
 .svg-button:hover {  
-  stroke: #6AB8D4;
+  stroke: var(--color-orange-dark);
 }
 
 .svg-button:active {
