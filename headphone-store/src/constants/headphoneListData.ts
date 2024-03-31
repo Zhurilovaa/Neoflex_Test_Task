@@ -3,7 +3,7 @@ import { HeadphoneData } from '../types/Headphone.types';
 export const headphoneList: HeadphoneData[] = [
   {
     'id': 1,
-    'img': '/src/source/image-1.png',
+    'img': '/source/image-1.png',
     'title': 'Apple EarPods',
     'price': 2327,
     'rate': 4.5,
@@ -13,7 +13,7 @@ export const headphoneList: HeadphoneData[] = [
   },
   {
     'id': 2,
-    'img': '/src/source/image-2.png',
+    'img': '/source/image-2.png',
     'title': 'Apple BYZ S852I',
     'price': 2927,
     'rate': 4.7,
@@ -23,7 +23,7 @@ export const headphoneList: HeadphoneData[] = [
   },
   {
     'id': 3,
-    'img': '/src/source/image-3.png',
+    'img': '/source/image-3.png',
     'title': 'Samsung EO-HS1303WEGRU',
     'price': 999,
     'rate': 4.5,
@@ -33,7 +33,7 @@ export const headphoneList: HeadphoneData[] = [
   },
   {
     'id': 4,
-    'img': '/src/source/image-4.png',
+    'img': '/source/image-4.png',
     'title': 'JBL Tune 510BT',
     'price': 4499,
     'rate': 4.8,
@@ -43,7 +43,7 @@ export const headphoneList: HeadphoneData[] = [
   },
   {
     'id': 5,
-    'img': '/src/source/image-5.png',
+    'img': '/source/image-5.png',
     'title': 'Sony WH-1000XM4',
     'price': 21662,
     'rate': 4.2,
@@ -53,7 +53,7 @@ export const headphoneList: HeadphoneData[] = [
   },
   {
     'id': 6,
-    'img': '/src/source/image-6.png',
+    'img': '/source/image-6.png',
     'title': 'Samsung Galaxy Buds2 Pro',
     'price': 13490,
     'rate': 4.9,
@@ -63,7 +63,7 @@ export const headphoneList: HeadphoneData[] = [
   },
   {
     'id': 7,
-    'img': '/src/source/image-7.png',
+    'img': '/source/image-7.png',
     'title': 'Apple AirPods 2',
     'price': 12390,
     'rate': 4.9,
@@ -73,7 +73,7 @@ export const headphoneList: HeadphoneData[] = [
   },
   {
     'id': 8,
-    'img': '/src/source/image-8.png',
+    'img': '/source/image-8.png',
     'title': 'Apple AirPods 3',
     'price': 17990,
     'rate': 5.0,
@@ -83,7 +83,7 @@ export const headphoneList: HeadphoneData[] = [
   },
   {
     'id': 9,
-    'img': '/src/source/image-9.png',
+    'img': '/source/image-9.png',
     'title': 'Sony WF-1000XM4',
     'price': 14318,
     'rate': 4.6,

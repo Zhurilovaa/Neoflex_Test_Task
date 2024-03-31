@@ -1,4 +1,3 @@
-import { useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import './HeadphoneList.css';
 import { Headphone } from '../HeadPhone/Headphone';
@@ -8,14 +7,7 @@ import { MainMenu } from '../MainMenu/MainMenu';
 import { Footer } from '../Footer/Footer';
 
 export function HeadphoneList() {
-  const locatPage = useLocation();
-
   const headphoneListCurr = useSelector((state: ReduxStoreToolkit) => state.headPhoneList.value);
-  const countAll = useSelector((state: ReduxStoreToolkit) => state.headPhoneList.countAll);
-  console.log(`Create HeadPhoneList component.`);
-  console.log('Curr location = ', locatPage);
-  console.log('headphoneListCurr:', headphoneListCurr);
-  console.log('countAll', countAll);
 
   return (
     <div className="content">
@@ -26,17 +18,21 @@ export function HeadphoneList() {
         <div className="part">
           <div className="name-section">Наушники</div>
           <div className="products-list">
-            {headphoneListCurr.map((product: HeadphoneData, index = 0) => (
-              <Headphone key={index} basketOn={false} />
-            ))}
+            {headphoneListCurr
+              .filter((product) => !product.bluetooth)
+              .map((product: HeadphoneData, index = 0) => (
+                <Headphone key={index} basketOn={false} product={product} />
+              ))}
           </div>
         </div>
         <div className="part">
           <div className="name-section">Беспроводные наушники</div>
           <div className="products-list">
-            {headphoneListCurr.map((product: HeadphoneData, index = 0) => (
-              <Headphone key={index} basketOn={false} />
-            ))}
+            {headphoneListCurr
+              .filter((product) => product.bluetooth)
+              .map((product: HeadphoneData, index = 0) => (
+                <Headphone key={index} basketOn={false} product={product} />
+              ))}
           </div>
         </div>
       </div>

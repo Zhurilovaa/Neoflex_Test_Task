@@ -7,6 +7,7 @@ import { HeadphoneData } from '../types/Headphone.types';
 //  2)addInBasket +
 //  3)subInBasket +
 //  4)deleteInBasket +
+//  5)buyAll in basket +
 
 export const headPhoneSlice = createSlice({
   name: 'headPhoneList',
@@ -46,9 +47,14 @@ export const headPhoneSlice = createSlice({
       state.countBasket = state.countBasket - state.value[indexCurr].countInBasket;
       state.value[indexCurr].countInBasket = 0;
     },
+    buyAllInBasket: (state, action) => {
+      state.countBasket = 0;
+      state.sumPriceInBasket = 0;
+      state.value.forEach((element: HeadphoneData) => (element.countInBasket = 0));
+    },
   },
 });
 
-export const { setIsFavorite, addInBasket, subInBasket, deleteInBasket } = headPhoneSlice.actions;
+export const { setIsFavorite, addInBasket, subInBasket, deleteInBasket, buyAllInBasket } = headPhoneSlice.actions;
 
 export default headPhoneSlice.reducer;

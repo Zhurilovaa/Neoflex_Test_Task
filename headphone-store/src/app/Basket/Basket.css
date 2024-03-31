@@ -1,0 +1,119 @@
+.basket{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.list-buy{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+
+.img-and-price{
+  width:80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.title-and-price{
+  display: flex;
+  flex-direction: column;
+}
+
+.title-and-price__price{
+  color: var(--color-grey-light);
+  font-size: 15px;
+}
+
+.pay{
+  align-self: baseline;
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  min-width: 170px;
+  background-color: var(--color-white);
+  border-radius: 10px;  
+}
+.pay .name-section{
+  margin:0;
+}
+
+.pay .price-all-product{
+  margin: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.pay .price-all-product .name-section{
+  color:var(--color-text-black);
+  font-size: 18px;
+}
+
+.pay .add-and-price__price{ 
+  font-family: 'Montserrat';
+  margin-right: 25px;  
+  font-size: 1.2em;
+  font-weight:bold;
+  color: var(--color-text-black);
+}
+
+.pay-all{
+  width: 100%;
+}
+
+.pay-all .button-buy{
+  width: 100%;
+  border-radius: 10px;
+  padding:20px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: -10px;                
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 21px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);                
+}
+
+
+.empty{
+  width: 60%;
+  padding:5%;  
+}
+.name-section{
+  font-size: 18px;
+}
+
+.not-disabled{
+  background-color: var(--color-text-black);
+  color: var(--color-white);
+  &:hover{
+      color: var(--color-grey-dark);
+      font-weight: 700;
+      background-color: var(--color-orange);
+      transition: all 0.8s;
+  }
+  &:active{
+      color: var(--color-green);
+      font-weight: 700;
+      background-color: var(--color-grey-light);
+      transition: all 0.1s;
+  }
+}
+.disabled{
+  background-color: var(--color-grey-light);
+  color: var(--color-backgrount);
+  cursor: not-allowed;
+  &:hover{
+      background-color: var(--color-backgrount);
+      color: var(--color-grey-light);
+  }
+}

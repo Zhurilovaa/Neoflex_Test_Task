@@ -1,6 +1,7 @@
 import './FavoriteButton.css';
+import { FavoriteProps } from './Favorite.types';
 
-export function FavoriteButton() {
+export function FavoriteButton({ favorite }: FavoriteProps) {
   return (
     <div>
       <svg
@@ -9,7 +10,7 @@ export function FavoriteButton() {
         xmlns="http://www.w3.org/2000/svg"
         strokeWidth={1.5}
         stroke="currentColor"
-        className="w-6 h-6 svg-button">
+        className={'w-6 h-6 svg-button' + (favorite ? ' favorite' : '')}>
         <path
           strokeLinecap="round"
           strokeLinejoin="round"

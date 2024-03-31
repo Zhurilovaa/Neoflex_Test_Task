@@ -7,6 +7,18 @@
   stroke: var(--color-orange-dark);
 }
 
+.favorite {
+  fill: var(--color-grey-dark);
+}
+
+.favorite:hover {
+  fill: var(--color-orange-dark);
+}
+
+.favorite:active {
+  fill: var(--color-green);
+}
+
 .disabled {
   stroke: #edb06f
 }

@@ -19,6 +19,10 @@ export function MainMenu() {
     console.log('Navigate Basket work!');
     navigateMainPage(`/qpick/basket`, { replace: false });
   }
+  function handleNavigateFavoritesPage() {
+    console.log('Navigate Favorites work!');
+    navigateMainPage(`/qpick/favorites`, { replace: false });
+  }
 
   return (
     <header className="head">
@@ -29,8 +33,8 @@ export function MainMenu() {
       </div>
       <div className="menu-icons">
         <div className="menu-icons__element">
-          <div>
-            <FavoriteButton />
+          <div onClick={handleNavigateFavoritesPage}>
+            <FavoriteButton favorite={false} />
           </div>
           <div className="count-product">{countFavorite}</div>
         </div>
