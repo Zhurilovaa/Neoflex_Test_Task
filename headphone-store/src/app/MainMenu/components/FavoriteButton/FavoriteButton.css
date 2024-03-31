@@ -1,0 +1,28 @@
+.svg-button {
+  stroke: var(--color-grey-dark);
+  width: 25px; 
+  height: 25px; 
+}
+.svg-button:hover {  
+  stroke: var(--color-orange-dark);
+}
+
+.favorite {
+  fill: var(--color-grey-dark);
+}
+
+.favorite:hover {
+  fill: var(--color-orange-dark);
+}
+
+.favorite:active {
+  fill: var(--color-green);
+}
+
+.disabled {
+  stroke: #edb06f
+}
+
+.disabled:hover {
+  stroke: darkred;
+}
