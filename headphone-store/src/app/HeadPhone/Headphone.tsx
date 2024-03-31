@@ -70,9 +70,25 @@ export function Headphone({ basketOn, product }: HeadphoneProps) {
               <div className="rate-and-buy__rate-value">{product.rate}</div>
             </div>
             <div className="buy">
-              <button className="button-buy" onClick={handleBuyProduct}>
-                Купить
-              </button>
+              {!product.countInBasket ? (
+                <button className="button-buy" onClick={handleBuyProduct}>
+                  Купить
+                </button>
+              ) : (
+                <div className="add-and-price__add">
+                  <div className="add-and-price__minus-plus">
+                    <button className="button-minus-plus" onClick={handleSubProduct}>
+                      -
+                    </button>
+                  </div>
+                  <div className="add-and-price__count">{product.countInBasket}</div>
+                  <div className="add-and-price__minus-plus">
+                    <button className="button-minus-plus" onClick={handleAddProduct}>
+                      +
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>

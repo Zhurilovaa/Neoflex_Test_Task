@@ -26,6 +26,19 @@ export function Basket() {
         <div className="part">
           <div className="name-section">Корзина</div>
           <div className="basket">
+            {countBasket ? (
+              <div className="list-buy">
+                {headphoneListCurr
+                  .filter((product) => product.countInBasket)
+                  .map((product: HeadphoneData, index = 0) => (
+                    <Headphone key={index} basketOn={true} product={product} />
+                  ))}
+              </div>
+            ) : (
+              <div className="empty">
+                <div className="name-section">в списке избранного пусто...</div>
+              </div>
+            )}
             <div className="pay">
               <div className="price-all-product">
                 <div className="name-section">ИТОГО</div>
@@ -40,19 +53,6 @@ export function Basket() {
                 </button>
               </div>
             </div>
-            {countBasket ? (
-              <div className="list-buy">
-                {headphoneListCurr
-                  .filter((product) => product.countInBasket)
-                  .map((product: HeadphoneData, index = 0) => (
-                    <Headphone key={index} basketOn={true} product={product} />
-                  ))}
-              </div>
-            ) : (
-              <div className="empty">
-                <div className="name-section">в списке избранного пусто...</div>
-              </div>
-            )}
           </div>
         </div>
       </div>

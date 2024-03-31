@@ -16,6 +16,10 @@ export function Footer() {
     console.log('Navigate Basket work!');
     navigateMainPage(`/qpick/basket`, { replace: false });
   }
+  function handleNavigateFavoritesPage() {
+    console.log('Navigate Favorites work!');
+    navigateMainPage(`/qpick/favorites`, { replace: false });
+  }
 
   return (
     <div className="footer">
@@ -25,7 +29,7 @@ export function Footer() {
         </a>
       </div>
       <div className="links">
-        <div className="links__part">
+        <div className="links__part" onClick={handleNavigateFavoritesPage}>
           <div>
             <p>Избранное</p>
           </div>

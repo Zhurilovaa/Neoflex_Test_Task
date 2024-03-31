@@ -3,13 +3,18 @@
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content:flex-start;
-  width: 300px;
+  min-width: 260px;
   margin: 8px;
   background-color: var(--color-white);
   border-radius: 10px;
   padding: 10px;
-  
+  @media (max-width: 375px)
+  {
+    min-width: 240px;
+    margin: 8px 0px;
+  }  
 }
+
 .product-element:hover{
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   transition: all 0.8s;
@@ -26,6 +31,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+
 }
 
 .img-product{    
@@ -118,15 +124,19 @@
 
 .product-in-basket{
   width:100%;
-  min-width: 420px;
+  min-width: 260px;
   margin-top: 1%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
   background-color:  var(--color-white);
-  margin: 8px;
+  margin: 8px 0px;
   border-radius: 10px;
+  @media (max-width: 650px) {
+    min-width: 240px;
+    justify-content: center;
+  }
 }
 .product-in-basket:hover{
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
@@ -231,4 +241,10 @@
   line-height: 21px;
 
   color: var(--color-grey-dark);
+}
+
+.buy .add-and-price__add{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }

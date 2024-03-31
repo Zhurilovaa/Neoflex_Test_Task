@@ -1,5 +1,5 @@
 .head {
-    width: 80%;
+    width: 90%;
     height: 60px;
     background-color: var(--color-backgrount);
 
@@ -9,6 +9,10 @@
     left: 0;
     right: 0;
     z-index: 3;
+
+    @media (max-width: 400px) {
+        width: 95%;
+    }
 }
 
 .logo{
@@ -16,7 +20,7 @@
     left: 0%;
     right: 92.34%;
     top: 25%;
-    bottom: 25%;
+    bottom: 25%; 
 }
 
 .name-shop{
@@ -26,18 +30,18 @@
     font-size: 25px;
     line-height: 30px;
 
-    color: var(--color-text-black);
-    &:hover{
-        color: var(--color-orange-dark);
-        transition: all 0.5s;
-        cursor: pointer;
-    }
+    color: var(--color-text-black);    
+}
+
+.name-shop:hover{
+    color: var(--color-orange-dark);
+    transition: all 0.5s;
+    cursor: pointer;
 }
 
 .menu-icons{
     position: absolute;
-    left: 89.51%;
-    right: -0.27%;
+    right: -0.27%; 
     top: 0%;
     bottom: 0%;
 
@@ -53,12 +57,15 @@
     flex-wrap: nowrap;
     justify-content: center;
     align-items: stretch;
-    position: relative;   
-    &:hover{
-        animation: pulse 0.8s;
-        cursor: pointer;
-    } 
+    position: relative; 
+    margin: 0px 8px;  
+    
 }
+
+.menu-icons__element:hover{
+    animation: pulse 0.8s;
+    cursor: pointer;
+} 
 
 .count-product{
     width: 18px;

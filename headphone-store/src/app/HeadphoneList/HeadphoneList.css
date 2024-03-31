@@ -15,6 +15,9 @@
   padding-bottom: 170px;
   display: flex;
   flex-direction: column;
+  @media (max-width: 375px) {
+    padding-bottom: 221px;
+  }
 }
 
 .name-section {

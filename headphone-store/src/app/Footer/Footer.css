@@ -1,6 +1,6 @@
 .footer{
-  width: 80%;
-  height: 149px;
+  width: 90%;
+  min-height: 149px;
 
   position:fixed;
   margin-left: auto;
@@ -12,14 +12,27 @@
   background: var(--color-white);
   box-shadow: 0px 0px 20px var(--color-white);
   border-radius: 30px 30px 0px 0px;
+
+  @media (max-width: 400px) {
+    width: 95%;
+  }
+  @media (max-width: 375px) {
+    height: 200px;
+    display: grid;
+    grid-template-areas: "logo" "links" "social";
+  }
 }
 
 
-.logo{
+.footer .logo{
   position: absolute;
   left: 3%;
   top: 25%;
   bottom: 25%;
+  @media (max-width: 375px) {
+    grid-area: logo;
+    width: 100%;
+  }
 }
 
 .name-shop{   
@@ -60,6 +73,11 @@
   font-size: 17px;
   line-height: 21px;
   color: var(--color-text-black);
+  @media (max-width: 375px) {
+    grid-area: links;
+    width: 100%;
+    justify-content: center; 
+  }
 }
 
 p:hover{
@@ -75,11 +93,18 @@ p:hover{
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
+  @media (max-width: 660px){
+    flex-direction: column;
+    padding: 0px 4px;
+  }
 }
 .links__lang-part{          
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  @media (max-width: 660px){
+    justify-content: flex-start;
+  }
 }
 .links__lang{
   margin-left: 5px;
@@ -114,6 +139,10 @@ p:hover{
   right: 3%;
   top: 25%;
   bottom: 25%;  
+  @media (max-width: 375px) {
+    grid-area: social;
+    width: 100%;
+  }
 }
 
 .social-media__icon{

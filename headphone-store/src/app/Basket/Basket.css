@@ -2,14 +2,19 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: space-between;  
+  @media (max-width: 750px) {
+    flex-direction: column;
+  }
 }
 
 .list-buy{
   display: flex;
   flex-direction: column;
   width: 60%;
+  @media (max-width: 750px) {
+    width: 100%;
+  }
 }
 
 
@@ -18,6 +23,10 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  @media (max-width: 750px) {
+    width: 100%;
+    flex-direction: column;
+  }
 }
 
 .title-and-price{
@@ -38,6 +47,10 @@
   min-width: 170px;
   background-color: var(--color-white);
   border-radius: 10px;  
+  margin: 8px 0px;
+  @media (max-width: 750px) {
+    width: 100%;
+  }
 }
 .pay .name-section{
   margin:0;
@@ -58,7 +71,7 @@
 
 .pay .add-and-price__price{ 
   font-family: 'Montserrat';
-  margin-right: 25px;  
+  margin-right: 10%;  
   font-size: 1.2em;
   font-weight:bold;
   color: var(--color-text-black);
@@ -87,6 +100,9 @@
 .empty{
   width: 60%;
   padding:5%;  
+  @media (max-width: 750px) {
+    width: 100%;
+  }
 }
 .name-section{
   font-size: 18px;
