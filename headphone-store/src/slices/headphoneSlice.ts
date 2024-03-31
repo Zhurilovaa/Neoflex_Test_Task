@@ -8,6 +8,7 @@ import { HeadphoneData } from '../types/Headphone.types';
 //  3)subInBasket +
 //  4)deleteInBasket +
 //  5)buyAll in basket +
+//  6)setReadyToPay
 
 export const headPhoneSlice = createSlice({
   name: 'headPhoneList',
@@ -16,6 +17,7 @@ export const headPhoneSlice = createSlice({
     countBasket: 0,
     countFavorite: 0,
     sumPriceInBasket: 0,
+    readyToPay: false,
     value: headphoneList,
   },
   reducers: {
@@ -52,9 +54,13 @@ export const headPhoneSlice = createSlice({
       state.sumPriceInBasket = 0;
       state.value.forEach((element: HeadphoneData) => (element.countInBasket = 0));
     },
+    setReadyToPay: (state, action) => {
+      state.readyToPay = !state.readyToPay;
+    },
   },
 });
 
-export const { setIsFavorite, addInBasket, subInBasket, deleteInBasket, buyAllInBasket } = headPhoneSlice.actions;
+export const { setIsFavorite, addInBasket, subInBasket, deleteInBasket, buyAllInBasket, setReadyToPay } =
+  headPhoneSlice.actions;
 
 export default headPhoneSlice.reducer;

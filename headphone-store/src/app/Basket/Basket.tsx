@@ -5,17 +5,19 @@ import { ReduxStoreToolkit } from '../../types/ReduxStore.types';
 import { MainMenu } from '../MainMenu/MainMenu';
 import { Footer } from '../Footer/Footer';
 import { HeadphoneData } from '../../types/Headphone.types';
-import { buyAllInBasket } from '../../slices/headphoneSlice';
+import { PopUpWindow } from './components/PopUpWindow/PopUpWindow';
+import { setReadyToPay } from '../../slices/headphoneSlice';
 
 export function Basket() {
   const dispatch = useDispatch();
   const headphoneListCurr = useSelector((state: ReduxStoreToolkit) => state.headPhoneList.value);
   const countBasket = useSelector((state: ReduxStoreToolkit) => state.headPhoneList.countBasket);
   const sumPrice = useSelector((state: ReduxStoreToolkit) => state.headPhoneList.sumPriceInBasket);
+  const readyPay = useSelector((state: ReduxStoreToolkit) => state.headPhoneList.readyToPay);
 
   function handleBuyAll() {
     console.log('Buy All function work!');
-    dispatch(buyAllInBasket({}));
+    dispatch(setReadyToPay({}));
   }
   return (
     <div className="content">
@@ -55,6 +57,7 @@ export function Basket() {
             </div>
           </div>
         </div>
+        {readyPay ? <PopUpWindow /> : <></>}
       </div>
       <div className="footer">
         <Footer />
