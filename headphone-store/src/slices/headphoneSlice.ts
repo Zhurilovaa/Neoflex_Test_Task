@@ -15,36 +15,36 @@ export const headPhoneSlice = createSlice({
     countBasket: 0,
     countFavorite: 0,
     sumPriceInBasket: 0,
-    headPhoneList: headphoneList,
+    value: headphoneList,
   },
   reducers: {
     setIsFavorite: (state, action) => {
-      const indexCurr = state.headPhoneList.findIndex((element: HeadphoneData) => element.id === action.payload.id);
-      state.headPhoneList[indexCurr].isFavorite = !state.headPhoneList[indexCurr].isFavorite;
-      if (state.headPhoneList[indexCurr].isFavorite) {
+      const indexCurr = state.value.findIndex((element: HeadphoneData) => element.id === action.payload.id);
+      state.value[indexCurr].isFavorite = !state.value[indexCurr].isFavorite;
+      if (state.value[indexCurr].isFavorite) {
         state.countFavorite = state.countFavorite + 1;
       } else {
         state.countFavorite = state.countFavorite - 1;
       }
     },
     addInBasket: (state, action) => {
-      const indexCurr = state.headPhoneList.findIndex((element: HeadphoneData) => element.id === action.payload.id);
-      state.headPhoneList[indexCurr].countInBasket = state.headPhoneList[indexCurr].countInBasket + 1;
+      const indexCurr = state.value.findIndex((element: HeadphoneData) => element.id === action.payload.id);
+      state.value[indexCurr].countInBasket = state.value[indexCurr].countInBasket + 1;
       state.countBasket = state.countBasket + 1;
-      state.sumPriceInBasket = state.sumPriceInBasket + state.headPhoneList[indexCurr].price;
+      state.sumPriceInBasket = state.sumPriceInBasket + state.value[indexCurr].price;
     },
     subInBasket: (state, action) => {
-      const indexCurr = state.headPhoneList.findIndex((element: HeadphoneData) => element.id === action.payload.id);
-      state.headPhoneList[indexCurr].countInBasket = state.headPhoneList[indexCurr].countInBasket - 1;
+      const indexCurr = state.value.findIndex((element: HeadphoneData) => element.id === action.payload.id);
+      state.value[indexCurr].countInBasket = state.value[indexCurr].countInBasket - 1;
       state.countBasket = state.countBasket - 1;
-      state.sumPriceInBasket = state.sumPriceInBasket - state.headPhoneList[indexCurr].price;
+      state.sumPriceInBasket = state.sumPriceInBasket - state.value[indexCurr].price;
     },
     deleteInBasket: (state, action) => {
-      const indexCurr = state.headPhoneList.findIndex((element: HeadphoneData) => element.id === action.payload.id);
+      const indexCurr = state.value.findIndex((element: HeadphoneData) => element.id === action.payload.id);
       state.sumPriceInBasket =
-        state.sumPriceInBasket - state.headPhoneList[indexCurr].price * state.headPhoneList[indexCurr].countInBasket;
-      state.countBasket = state.countBasket - state.headPhoneList[indexCurr].countInBasket;
-      state.headPhoneList[indexCurr].countInBasket = 0;
+        state.sumPriceInBasket - state.value[indexCurr].price * state.value[indexCurr].countInBasket;
+      state.countBasket = state.countBasket - state.value[indexCurr].countInBasket;
+      state.value[indexCurr].countInBasket = 0;
     },
   },
 });

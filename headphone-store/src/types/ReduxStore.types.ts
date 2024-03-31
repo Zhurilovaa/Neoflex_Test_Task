@@ -6,6 +6,6 @@ export interface ReduxStoreToolkit {
     countBasket: number;
     countFavorite: number;
     sumPriceInBasket: number;
-    headPhoneList: HeadphoneData[];
+    value: HeadphoneData[];
   };
 }
