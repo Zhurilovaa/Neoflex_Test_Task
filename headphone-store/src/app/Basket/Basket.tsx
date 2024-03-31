@@ -1,6 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { Headphone } from '../HeadPhone/Headphone';
+
 import './Basket.css';
+
+import { Headphone } from '../HeadPhone/Headphone';
 import { ReduxStoreToolkit } from '../../types/ReduxStore.types';
 import { MainMenu } from '../MainMenu/MainMenu';
 import { Footer } from '../Footer/Footer';
@@ -16,9 +18,9 @@ export function Basket() {
   const readyPay = useSelector((state: ReduxStoreToolkit) => state.headPhoneList.readyToPay);
 
   function handleBuyAll() {
-    console.log('Buy All function work!');
     dispatch(setReadyToPay({}));
   }
+
   return (
     <div className="content">
       <div>
@@ -38,7 +40,7 @@ export function Basket() {
               </div>
             ) : (
               <div className="empty">
-                <div className="name-section">в списке избранного пусто...</div>
+                <div className="name-section">в корзине пусто...</div>
               </div>
             )}
             <div className="pay">

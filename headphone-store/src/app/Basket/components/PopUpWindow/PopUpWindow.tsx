@@ -1,5 +1,7 @@
 import { useDispatch } from 'react-redux';
+
 import './PopUpWindow.css';
+
 import { setReadyToPay, buyAllInBasket } from '../../../../slices/headphoneSlice';
 
 export function PopUpWindow() {
@@ -8,11 +10,12 @@ export function PopUpWindow() {
   function handleDontPay() {
     dispatch(setReadyToPay({}));
   }
+
   function handleBuyAll() {
-    console.log('Buy All function work!');
     dispatch(setReadyToPay({}));
     dispatch(buyAllInBasket({}));
   }
+
   return (
     <div id="openModal" className="modal">
       <div className="modal-dialog">

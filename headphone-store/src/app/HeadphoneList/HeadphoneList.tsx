@@ -1,5 +1,7 @@
 import { useSelector } from 'react-redux';
+
 import './HeadphoneList.css';
+
 import { Headphone } from '../HeadPhone/Headphone';
 import { ReduxStoreToolkit } from '../../types/ReduxStore.types';
 import { HeadphoneData } from '../../types/Headphone.types';

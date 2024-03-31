@@ -117,6 +117,7 @@
 .button-buy:hover{
   color:var(--color-orange-dark);
 }
+
 .button-buy:active{
   color:var(--color-green);
   background-color: var(--color-backgrount);
@@ -138,11 +139,11 @@
     justify-content: center;
   }
 }
+
 .product-in-basket:hover{
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   transition: all 0.8s;
 }
-
 
 .button-fav-del-product{
   width:100%;
@@ -156,7 +157,6 @@
   margin-right: 10px;
   background-color: var(--color-white);
 }
-
 
 .img-and-price{
   width:80%;
@@ -175,7 +175,6 @@
   font-size: 15px;
 }
 
-
 .add-and-price{
   padding: 10px;
   width:100%;
@@ -185,6 +184,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 .add-and-price .add-and-price__add{
   display: flex;
   flex-direction: row;
@@ -208,6 +208,7 @@
 
   padding:3px;
 }
+
 .button-minus-plus:hover{
   font-weight: 700;
   color:var(--color-white);

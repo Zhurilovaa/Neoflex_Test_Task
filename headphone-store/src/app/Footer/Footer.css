@@ -23,7 +23,6 @@
   }
 }
 
-
 .footer .logo{
   position: absolute;
   left: 3%;
@@ -42,8 +41,7 @@
   font-size: 25px;
   line-height: 30px;
 
-  color: var(--color-text-black);
-  
+  color: var(--color-text-black);  
 }
 
 .name-shop:hover{
@@ -98,6 +96,7 @@ p:hover{
     padding: 0px 4px;
   }
 }
+
 .links__lang-part{          
   display: flex;
   flex-direction: row;
@@ -106,6 +105,7 @@ p:hover{
     justify-content: flex-start;
   }
 }
+
 .links__lang{
   margin-left: 5px;
   font-family: 'Montserrat';
@@ -121,10 +121,12 @@ p:hover{
   width:20px;
   height: 20px;
 }
+
 #rus{
   color: var(--color-orange-dark); 
   font-weight: 700;
 }
+
 .links__lang:hover{
   cursor: pointer;
 } 
@@ -148,6 +150,7 @@ p:hover{
 .social-media__icon{
   margin-left: 5px;
 }
+
 .social-media__icon:hover {
   cursor: pointer;
 }

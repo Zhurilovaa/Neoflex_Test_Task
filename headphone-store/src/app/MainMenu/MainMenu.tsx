@@ -1,26 +1,27 @@
 import { useNavigate } from 'react-router-dom';
-import './MainMenu.css';
 import { useSelector } from 'react-redux';
+
+import './MainMenu.css';
+
 import { ReduxStoreToolkit } from '../../types/ReduxStore.types';
 import { FavoriteButton } from './components/FavoriteButton/FavoriteButton';
 import { BasketButton } from './components/BasketButton/BasketButton';
 
 export function MainMenu() {
   const navigateMainPage = useNavigate();
+
   const countFavorite = useSelector((state: ReduxStoreToolkit) => state.headPhoneList.countFavorite);
   const countBasket = useSelector((state: ReduxStoreToolkit) => state.headPhoneList.countBasket);
 
   function handleNavigateMainPage() {
-    console.log('Navigate Logo work!');
     navigateMainPage(`/qpick`, { replace: false });
   }
 
   function handleNavigateBasketPage() {
-    console.log('Navigate Basket work!');
     navigateMainPage(`/qpick/basket`, { replace: false });
   }
+
   function handleNavigateFavoritesPage() {
-    console.log('Navigate Favorites work!');
     navigateMainPage(`/qpick/favorites`, { replace: false });
   }
 

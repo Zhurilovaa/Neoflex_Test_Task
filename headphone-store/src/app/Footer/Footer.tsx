@@ -1,5 +1,7 @@
 import { useNavigate } from 'react-router-dom';
+
 import './Footer.css';
+
 import internet from './source/internet3.png';
 import vk from './source/vk.png';
 import telegram from './source/telegram.png';
@@ -9,15 +11,14 @@ export function Footer() {
   const navigateMainPage = useNavigate();
 
   function handleNavigateMainPage() {
-    console.log('Navigate Logo work!');
     navigateMainPage(`/qpick`, { replace: false });
   }
+
   function handleNavigateBasketPage() {
-    console.log('Navigate Basket work!');
     navigateMainPage(`/qpick/basket`, { replace: false });
   }
+
   function handleNavigateFavoritesPage() {
-    console.log('Navigate Favorites work!');
     navigateMainPage(`/qpick/favorites`, { replace: false });
   }
 

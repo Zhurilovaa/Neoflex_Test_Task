@@ -3,11 +3,11 @@ import { headphoneList } from '../constants/headphoneListData';
 import { HeadphoneData } from '../types/Headphone.types';
 
 // Действия для headPhoneList
-//  1)setIsFavorite +
-//  2)addInBasket +
-//  3)subInBasket +
-//  4)deleteInBasket +
-//  5)buyAll in basket +
+//  1)setIsFavorite
+//  2)addInBasket
+//  3)subInBasket
+//  4)deleteInBasket
+//  5)buyAll in basket
 //  6)setReadyToPay
 
 export const headPhoneSlice = createSlice({

@@ -1,5 +1,7 @@
 import { useDispatch } from 'react-redux';
+
 import './HeadPhone.css';
+
 import { HeadphoneProps } from './HeadPhone.types';
 import star from './source/star.png';
 import { addInBasket, deleteInBasket, setIsFavorite, subInBasket } from '../../slices/headphoneSlice';
@@ -8,46 +10,47 @@ import { TrashButton } from './components/TrashButton/TrashButton';
 
 export function Headphone({ basketOn, product }: HeadphoneProps) {
   const dispatch = useDispatch();
+
   function handleBuyProduct() {
-    console.log('Buy function work!');
     dispatch(
       addInBasket({
         id: product.id,
       })
     );
   }
+
   function handleFavoriteProduct() {
-    console.log('Favorite function work!');
     dispatch(
       setIsFavorite({
         id: product.id,
       })
     );
   }
+
   function handleDeleteProduct() {
-    console.log('Delete function work!');
     dispatch(
       deleteInBasket({
         id: product.id,
       })
     );
   }
+
   function handleAddProduct() {
-    console.log('Sub function work!');
     dispatch(
       addInBasket({
         id: product.id,
       })
     );
   }
+
   function handleSubProduct() {
-    console.log('Add function work!');
     dispatch(
       subInBasket({
         id: product.id,
       })
     );
   }
+
   return (
     <>
       {!basketOn ? (
